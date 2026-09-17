@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+<title>Patient Registration Validation - ABC Healthcare</title>
+<style>
+    body {
+        background-color: #EAF6F6;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px 0;
+    }
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+    /* HEADER */
+    .header-table {
+        width: 95%;
+        border: 0;
+        background-color: #006666;
+        margin: 15px auto 0;
+        border-collapse: collapse;
+    }
+    .logo-box {
+        background-color: #004d4d;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        width: 15%;
+        border-right: 2px solid #B2DFDB;
+    }
+    .banner-box {
+        padding: 20px;
+        text-align: center;
+        background-color: white;
+        width: 85%;
+    }
+    .banner-box h1 {
+        color: #006666;
+        margin: 0;
+    }
+    .banner-box p {
+        color: #006666;
+        margin: 5px 0;
+    }
+    /* CONTENT */
+    .header {
+        background-color: #006666;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+    }
+    .header h1 {
+        margin: 0;
+        font-size: 28px;
+    }
+    .header .subtitle {
+        color: #B2DFDB;
+        font-size: 18px;
+        margin: 5px 0;
+    }
+    .intro {
+        background-color: white;
+        text-align: center;
+        padding: 15px;
+    }
+    .intro h2 {
+        color: #006666;
+        font-size: 22px;
+    }
+    /* FORM */
+    .form-table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        border: 2px solid #006666;
+    }
+    .form-table td,
+    .form-table th {
+        padding: 12px;
+        border: 2px solid #006666;
+    }
+    .section-header {
+        background-color: #B2DFDB;
+        color: #006666;
+        font-size: 18px;
+        text-align: left;
+    }
+    .form-table label {
+        font-weight: bold;
+        color: #006666;
+    }
+    input {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #006666;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .error {
+        color: red;
+        font-size: 13px;
+        display: block;
+        margin-top: 5px;
+    }
+    .success {
+        color: green;
+        font-weight: bold;
+        text-align: center;
+        padding: 12px;
+        display: none;
+    }
+    .action-row {
+        background-color: #E0F2F1;
+        text-align: center;
+    }
+    .btn-action {
+        padding: 10px 20px;
+        margin: 0 8px;
+        cursor: pointer;
+        border: 1px solid #006666;
+        background-color: #006666;
+        color: white;
+        border-radius: 4px;
+    }
+    .btn-action:hover {
+        background-color: #004d4d;
+    }
+    /* OBSERVATION */
+    .observation {
+        background-color: white;
+        border: 2px solid #006666;
+        margin-top: 30px;
+        padding: 20px;
+    }
+    .observation h2 {
+        color: #006666;
+    }
+    .observation table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .observation th,
+    .observation td {
+        border: 1px solid #006666;
+        padding: 10px;
+        text-align: left;
+    }
+    .observation th {
+        background-color: #B2DFDB;
+        color: #006666;
+    }
+    /* FOOTER */
+    .footer-table {
+        width: 100%;
+        border: 0;
+        background-color: #006666;
+        color: white;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+    .footer-table td {
+        padding: 12px;
+        text-align: center;
+    }
+</style>
+```
+</head>
+<body>
+```
+<div class="container">
+    <!-- HEADER -->
+    <table class="header-table">
+        <tr>
+            <td class="logo-box">
+                <strong>ABC</strong><br>
+                HEALTHCARE
+            </td>
+            <td class="banner-box">
+                <h1>ABC HEALTHCARE CENTRE</h1>
+                <p>Urine Test Strip Reader System</p>
+            </td>
+        </tr>
+    </table>
+    <!-- TITLE -->
+    <div class="header">
+        <h1>Patient Registration</h1>
+        <p class="subtitle">Registration Details Validation</p>
+    </div>
+    <div class="intro">
+        <h2>Validate Patient Registration Details Using Regular Expressions</h2>
+        <p>
+            Enter patient information and validate the details using
+            JavaScript regular expressions.
+        </p>
+    </div>
+    <!-- FORM -->
+    <form id="registrationForm">
+        <table class="form-table">
+            <tr class="section-header">
+                <th colspan="2">Patient Registration Details</th>
+            </tr>
+            <!-- PATIENT NAME -->
+            <tr>
+                <td>
+                    <label for="patientName">Patient Name</label>
+                </td>
+                <td>
+                    <input type="text"
+                           id="patientName"
+                           name="patientName"
+                           placeholder="Enter patient name">
+                    <span id="nameError" class="error"></span>
+                </td>
+            </tr>
+            <!-- MOBILE NUMBER -->
+            <tr>
+                <td>
+                    <label for="mobile">Mobile Number</label>
+                </td>
+                <td>
+                    <input type="text"
+                           id="mobile"
+                           name="mobile"
+                           placeholder="Enter 10-digit mobile number">
+                    <span id="mobileError" class="error"></span>
+                </td>
+            </tr>
+            <!-- PATIENT ID -->
+            <tr>
+                <td>
+                    <label for="patientId">Patient ID</label>
+                </td>
+                <td>
+                    <input type="text"
+                           id="patientId"
+                           name="patientId"
+                           placeholder="Example: PAT-1234">
+                    <span id="idError" class="error"></span>
+                </td>
+            </tr>
+            <!-- EMAIL -->
+            <tr>
+                <td>
+                    <label for="email">Email Address</label>
+                </td>
+                <td>
+                    <input type="text"
+                           id="email"
+                           name="email"
+                           placeholder="Example: rahul@gmail.com">
+                    <span id="emailError" class="error"></span>
+                </td>
+            </tr>
+            <!-- BUTTONS -->
+            <tr class="action-row">
+                <td colspan="2">
+                    <button type="submit" class="btn-action">
+                        Register Patient
+                    </button>
+                    <button type="reset" class="btn-action"
+                            onclick="clearMessages()">
+                        Clear
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <!-- SUCCESS MESSAGE -->
+    <div id="successMessage" class="success">
+        Patient registration successful! All details are valid.
+    </div>
+    <!-- OBSERVATION -->
+    <div class="observation">
+        <h2>Observation</h2>
+        <p>
+            The patient registration details are validated using
+            JavaScript regular expressions. Invalid information is
+            rejected and registration is prevented.
+        </p>
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Regular Expression</th>
+                <th>Example</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>Patient Name</td>
+                <td>Only alphabets and spaces</td>
+                <td>Rahul Sharma</td>
+                <td>Valid</td>
+            </tr>
+            <tr>
+                <td>Mobile Number</td>
+                <td>Exactly 10 digits</td>
+                <td>9876543210</td>
+                <td>Valid</td>
+            </tr>
+            <tr>
+                <td>Patient ID</td>
+                <td>PAT-1234 format</td>
+                <td>PAT-1234</td>
+                <td>Valid</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>Valid email format</td>
+                <td>rahul@gmail.com</td>
+                <td>Valid</td>
+            </tr>
+        </table>
+        <p>
+            <strong>Final Observation:</strong>
+            When all four fields contain valid information, a success
+            message is displayed. If any field is invalid, an error
+            message is displayed and the form submission is prevented.
+        </p>
+    </div>
+    <!-- FOOTER -->
+    <table class="footer-table">
+        <tr>
+            <td>
+                ABC Healthcare Centre | Patient Registration Portal
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- JAVASCRIPT -->
+<script>
+    // Get the form using DOM
+    const form = document.getElementById("registrationForm");
+    // Patient Name Validation
+    function validatePatientName() {
+        let name = document.getElementById("patientName").value.trim();
+        // Only alphabets and spaces
+        let namePattern = /^[A-Za-z ]+$/;
+        if (name === "") {
+            document.getElementById("nameError").textContent =
+                "Patient name is required.";
+            return false;
+        }
+        if (!namePattern.test(name)) {
+            document.getElementById("nameError").textContent =
+                "Name must contain only alphabets and spaces.";
+            return false;
+        }
+        document.getElementById("nameError").textContent = "";
+        return true;
+    }
+    // Mobile Number Validation
+    function validateMobile() {
+        let mobile = document.getElementById("mobile").value.trim();
+        // Exactly 10 digits
+        let mobilePattern = /^[0-9]{10}$/;
+        if (mobile === "") {
+            document.getElementById("mobileError").textContent =
+                "Mobile number is required.";
+            return false;
+        }
+        if (!mobilePattern.test(mobile)) {
+            document.getElementById("mobileError").textContent =
+                "Mobile number must contain exactly 10 digits.";
+            return false;
+        }
+        document.getElementById("mobileError").textContent = "";
+        return true;
+    }
+    // Patient ID Validation
+    function validatePatientId() {
+        let patientId =
+            document.getElementById("patientId").value.trim();
+        // PAT-1234 format
+        let idPattern = /^PAT-[0-9]{4}$/;
+        if (patientId === "") {
+            document.getElementById("idError").textContent =
+                "Patient ID is required.";
+            return false;
+        }
+        if (!idPattern.test(patientId)) {
+            document.getElementById("idError").textContent =
+                "Patient ID must be in PAT-1234 format.";
+            return false;
+        }
+        document.getElementById("idError").textContent = "";
+        return true;
+    }
+    // Email Validation
+    function validateEmail() {
+        let email = document.getElementById("email").value.trim();
+        // Basic valid email format
+        let emailPattern =
+            /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        if (email === "") {
+            document.getElementById("emailError").textContent =
+                "Email address is required.";
+            return false;
+        }
+        if (!emailPattern.test(email)) {
+            document.getElementById("emailError").textContent =
+                "Enter a valid email address.";
+            return false;
+        }
+        document.getElementById("emailError").textContent = "";
+        return true;
+    }
+    // Form Submit Event
+    form.addEventListener("submit", function(event) {
+        // Prevent default form submission
+        event.preventDefault();
+        // Call individual validation functions
+        let validName = validatePatientName();
+        let validMobile = validateMobile();
+        let validId = validatePatientId();
+        let validEmail = validateEmail();
+        // Boolean expression
+        let allValid =
+            validName &&
+            validMobile &&
+            validId &&
+            validEmail;
+        if (allValid) {
+            document.getElementById("successMessage").style.display =
+                "block";
+            alert("Patient registration successful!");
+            console.log("Patient registration successful.");
+        } else {
+            document.getElementById("successMessage").style.display =
+                "none";
+            alert("Please correct the invalid information.");
+            console.log("Patient registration failed.");
+        }
+    });
+    // Clear error and success messages
+    function clearMessages() {
+        document.getElementById("nameError").textContent = "";
+        document.getElementById("mobileError").textContent = "";
+        document.getElementById("idError").textContent = "";
+        document.getElementById("emailError").textContent = "";
+        document.getElementById("successMessage").style.display =
+            "none";
+    }
+</script>
+```
+</body>
+</html>

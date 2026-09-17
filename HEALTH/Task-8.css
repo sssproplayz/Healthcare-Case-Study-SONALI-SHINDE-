@@ -1,0 +1,159 @@
+.header-table {
+            width: 95%;
+            border: 0;
+            background-color: #006666;
+            margin: 15px auto 0 auto;
+            border-collapse: collapse;
+        }
+
+        .logo-box {
+            background-color: #004d4d;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            width: 15%;
+            border-right: 2px solid #B2DFDB;
+        }
+
+        .banner-box {
+            padding: 20px;
+            text-align: center;
+            color: white;
+            width: 85%;
+        }
+body {
+    background-color: #EAF6F6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Header Styles */
+.header {
+    background-color: #006666;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.header .subtitle {
+    color: #B2DFDB;
+    font-size: 18px;
+    margin: 5px 0 0 0;
+}
+
+/* Intro Section */
+.intro {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.intro h2 {
+    color: #006666;
+    font-size: 22px;
+    margin: 0 0 10px 0;
+}
+
+.intro p {
+    margin: 0;
+}
+
+/* Form & Table Styles */
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 2px solid #006666;
+}
+
+.form-table td, 
+.form-table th {
+    padding: 12px;
+    border: 2px solid #006666;
+    vertical-align: middle;
+}
+
+.label-col {
+    width: 35%;
+}
+
+.section-header {
+    background-color: #B2DFDB;
+    text-align: left;
+}
+
+.section-header th {
+    color: #006666;
+    font-size: 18px;
+}
+
+/* Input Styles */
+.input-text {
+    width: 80%;
+    max-width: 300px;
+    padding: 4px;
+}
+
+.input-date {
+    padding: 4px;
+}
+
+.radio-group label {
+    margin-right: 15px;
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.checkbox-group label:last-child {
+    margin-bottom: 0;
+}
+
+/* Row Highlights */
+.highlight-row {
+    background-color: #EAF6F6;
+}
+
+.action-row {
+    background-color: #E0F2F1;
+    text-align: center;
+}
+
+/* Buttons */
+.btn-link {
+    cursor: pointer;
+    padding: 4px 8px;
+    margin-right: 10px;
+}
+
+.btn-action {
+    padding: 6px 12px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+/* Footer Styles */
+.footer-table {
+            width: 100%;
+            border: 0;
+            background-color: #006666;
+            color: white;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }

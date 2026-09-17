@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration - ABC Healthcare</title>
+    <link rel="stylesheet" href="Task-8.css">
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <table class="header-table" id="header-section" cellpadding="0" cellspacing="0">
+        <tr>
+            <!-- TOP LEFT LOGO -->
+            <td class="logo-box" id="logo-container">
+                <a href="index.html" title="Internal Logo Link">
+                    <img src="logo.png"
+                         alt="Healthcare Logo"
+                         id="main-logo"
+                         style="max-width: 100px; height: auto;">
+                </a>
+                <br>
+                <font size="2" color="#B2DFDB">
+                    <b>ABC Healthcare</b>
+                </font>
+            </td>
+            <!-- TOP CENTER TO RIGHT BANNER -->
+            <td class="banner-box" id="banner-container">
+                <div class="tooltip-container" id="system-tooltip">
+                    <font color="white" size="6">
+                        <b>URINE TEST STRIP READER SYSTEM</b>
+                    </font>
+                </div>
+                <br>
+                <font color="#B2DFDB" size="4">
+                    ABC Healthcare Centre – Urine Test Centre Banner
+                </font>
+                <br>
+                <font color="#EAF6F6" size="2">
+                    Software Version: <b>v2.4.0</b> |
+                    Year: <b>2026</b>
+                </font>
+            </td>
+        </tr>
+    </table>
+    <div class="container">
+        <!-- INTRODUCTION -->
+        <section class="intro">
+            <h2>ONLINE PATIENT REGISTRATION</h2>
+            <p>
+                Please enter the patient's details carefully
+                to register for the urine test.
+            </p>
+        </section>
+        <!-- REGISTRATION FORM -->
+        <form class="registration-form" id="registrationForm">
+            <fieldset>
+                <legend>Patient Registration Details</legend>
+                <table class="form-table">
+                    <!-- PATIENT INFORMATION -->
+                    <thead>
+                        <tr class="section-header">
+                            <th colspan="2">
+                                Patient Information
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- PATIENT NAME -->
+                        <tr>
+                            <td class="label-col">
+                                <label for="patientName">
+                                    <b>Patient Name</b>
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text"
+                                       id="patientName"
+                                       name="patientName"
+                                       placeholder="Enter full name"
+                                       class="input-text">
+                                <span id="nameError"
+                                      style="color:red;">
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- MOBILE NUMBER -->
+                        <tr>
+                            <td class="label-col">
+                                <label for="mobile">
+                                    <b>Mobile Number</b>
+                                </label>
+                            </td>
+                            <td>
+                                <input type="tel"
+                                       id="mobile"
+                                       name="mobile"
+                                       placeholder="Enter 10-digit mobile number"
+                                       class="input-text">
+                                <span id="mobileError"
+                                      style="color:red;">
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- EMAIL -->
+                        <tr>
+                            <td class="label-col">
+                                <label for="email">
+                                    <b>Email</b>
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text"
+                                       id="email"
+                                       name="email"
+                                       placeholder="example@email.com"
+                                       class="input-text">
+                                <span id="emailError"
+                                      style="color:red;">
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- DATE OF BIRTH -->
+                        <tr>
+                            <td class="label-col">
+                                <label for="dob">
+                                    <b>Date of Birth</b>
+                                </label>
+                            </td>
+                            <td>
+                                <input type="date"
+                                       id="dob"
+                                       name="dob"
+                                       class="input-date">
+                                <span id="dobError"
+                                      style="color:red;">
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- GENDER -->
+                        <tr>
+                            <td class="label-col">
+                                <b>Gender</b>
+                            </td>
+                            <td class="radio-group">
+                                <label>
+                                    <input type="radio"
+                                           id="genderMale"
+                                           name="gender"
+                                           value="Male">
+                                    Male
+                                </label>
+                                <label>
+                                    <input type="radio"
+                                           id="genderFemale"
+                                           name="gender"
+                                           value="Female">
+                                    Female
+                                </label>
+                                <label>
+                                    <input type="radio"
+                                           id="genderOther"
+                                           name="gender"
+                                           value="Other">
+                                    Other
+                                </label>
+                                <br>
+                                <span id="genderError"
+                                      style="color:red;">
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- ADDRESS -->
+                        <tr>
+                            <td class="label-col">
+                                <label for="address">
+                                    <b>Address</b>
+                                </label>
+                            </td>
+                            <td>
+                                <textarea id="address"
+                                          name="address"
+                                          placeholder="Enter complete address"
+                                          class="input-text"
+                                          rows="4"
+                                          style="width:90%;"></textarea>
+                                <br>
+                                <span id="addressError"
+                                      style="color:red;">
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- BLOOD GROUP -->
+                        <tr>
+                            <td class="label-col">
+                                <label for="bloodGroup">
+                                    <b>Blood Group</b>
+                                </label>
+                            </td>
+                            <td>
+                                <select id="bloodGroup"
+                                        name="bloodGroup"
+                                        class="input-text">
+                                    <option value="">
+                                        Select Blood Group
+                                    </option>
+                                    <option value="A+">
+                                        A+
+                                    </option>
+                                    <option value="A-">
+                                        A-
+                                    </option>
+                                    <option value="B+">
+                                        B+
+                                    </option>
+                                    <option value="B-">
+                                        B-
+                                    </option>
+                                    <option value="AB+">
+                                        AB+
+                                    </option>
+                                    <option value="AB-">
+                                        AB-
+                                    </option>
+                                    <option value="O+">
+                                        O+
+                                    </option>
+                                    <option value="O-">
+                                        O-
+                                    </option>
+                                </select>
+                                <span id="bloodError"
+                                      style="color:red;">
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- DEPARTMENT / APPOINTMENT -->
+                        <tr>
+                            <td class="label-col">
+                                <label for="department">
+                                    <b>
+                                        Department / Appointment Type
+                                    </b>
+                                </label>
+                            </td>
+                            <td>
+                                <select id="department"
+                                        name="department"
+                                        class="input-text">
+                                    <option value="">
+                                        Select Department
+                                    </option>
+                                    <option value="Urine Test">
+                                        Urine Test
+                                    </option>
+                                    <option value="General Consultation">
+                                        General Consultation
+                                    </option>
+                                    <option value="Pathology">
+                                        Pathology
+                                    </option>
+                                    <option value="Urology">
+                                        Urology
+                                    </option>
+                                    <option value="Health Check-up">
+                                        Health Check-up
+                                    </option>
+                                </select>
+                                <span id="departmentError"
+                                      style="color:red;">
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- REGISTRATION DATE -->
+                        <tr>
+                            <td class="label-col">
+                                <label for="registrationDate">
+                                    <b>Registration Date</b>
+                                </label>
+                            </td>
+                            <td>
+                                <input type="date"
+                                       id="registrationDate"
+                                       name="registrationDate"
+                                       class="input-date">
+                                <span id="registrationError"
+                                      style="color:red;">
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- HEALTHCARE CENTRE -->
+                        <tr class="highlight-row">
+                            <td class="label-col">
+                                <b>Healthcare Centre</b>
+                            </td>
+                            <td>
+                                <a href="https://www.somaiya-ayurvihar.org/"
+                                   target="_blank">
+                                    <button type="button"
+                                            class="btn-link">
+                                        Somaiya Ayurvihar Hospital
+                                    </button>
+                                </a>
+                                <a href="https://www.somaiya.org/health.php"
+                                   target="_blank">
+                                    <button type="button"
+                                            class="btn-link">
+                                        Somaiya Diagnostic Centre
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                        <!-- SUBMIT AND RESET -->
+                        <tr class="action-row">
+                            <td colspan="2">
+                                <input type="submit"
+                                       value="REGISTER PATIENT"
+                                       class="btn-action">
+                                <input type="reset"
+                                       value="RESET FORM"
+                                       class="btn-action">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+        <!-- FOOTER -->
+        <table class="footer-table"
+               id="footer-section"
+               cellpadding="15">
+            <tr>
+                <td align="center">
+                    <font color="#ffffff" size="3">
+                        <b>ABC Healthcare Centre</b>
+                        |
+                        Urine Test Strip Reader System
+                    </font>
+                    <br>
+                    <font color="#B2DFDB" size="2">
+                        <b>Call:</b> +91 12345 67890
+                        &nbsp;|&nbsp;
+                        <b>Email:</b> support@abchealthcare.com
+                        &nbsp;|&nbsp;
+                        <b>Hospital Name:</b>
+                        ABC Healthcare Centre &
+                        Research Institute
+                    </font>
+                    <br><br>
+                    <font color="#ffffff" size="1">
+                        © 2026 ABC Healthcare.
+                        All Rights Reserved.
+                        |
+                        System Version 2.4.0
+                    </font>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- ====================================== -->
+    <!-- JAVASCRIPT VALIDATION - TASK 2, 3, 4 -->
+    <!-- ====================================== -->
+    <script>
+        /* FORM SUBMIT EVENT */
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            /* GET FORM VALUES */
+            let name =
+                document.getElementById("patientName").value.trim();
+            let address =
+                document.getElementById("address").value.trim();
+            let mobile =
+                document.getElementById("mobile").value.trim();
+            let email =
+                document.getElementById("email").value.trim();
+            let dob =
+                document.getElementById("dob").value;
+            let bloodGroup =
+                document.getElementById("bloodGroup").value;
+            let department =
+                document.getElementById("department").value;
+            let registrationDate =
+                document.getElementById("registrationDate").value;
+            /* CLEAR PREVIOUS ERRORS */
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("addressError").innerHTML = "";
+            document.getElementById("mobileError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("dobError").innerHTML = "";
+            document.getElementById("genderError").innerHTML = "";
+            document.getElementById("bloodError").innerHTML = "";
+            document.getElementById("departmentError").innerHTML = "";
+            document.getElementById("registrationError").innerHTML = "";
+            /* REMOVE OLD HIGHLIGHTING */
+            document.getElementById("patientName").style.border = "";
+            document.getElementById("address").style.border = "";
+            document.getElementById("mobile").style.border = "";
+            document.getElementById("email").style.border = "";
+            document.getElementById("dob").style.border = "";
+            document.getElementById("bloodGroup").style.border = "";
+            document.getElementById("department").style.border = "";
+            document.getElementById("registrationDate").style.border = "";
+            let valid = true;
+            /* ================================== */
+            /* TASK 2: PATIENT NAME VALIDATION */
+            /* ================================== */
+            /* Check if name is empty */
+            if (name === "") {
+                document.getElementById("nameError").innerHTML =
+                    " Patient Name is required.";
+                document.getElementById("patientName").style.border =
+                    "2px solid red";
+                valid = false;
+            }
+            /* Alphabetic characters and spaces only */
+            else if (!/^[A-Za-z ]+$/.test(name)) {
+                document.getElementById("nameError").innerHTML =
+                    " Patient Name must contain alphabets and spaces only.";
+                document.getElementById("patientName").style.border =
+                    "2px solid red";
+                valid = false;
+            }
+            /* ================================== */
+            /* TASK 2: ADDRESS VALIDATION */
+            /* ================================== */
+            if (address === "") {
+                document.getElementById("addressError").innerHTML =
+                    " Address is required.";
+                document.getElementById("address").style.border =
+                    "2px solid red";
+                valid = false;
+            }
+            /* ================================== */
+            /* TASK 3: MOBILE VALIDATION */
+            /* ================================== */
+            if (mobile === "") {
+                document.getElementById("mobileError").innerHTML =
+                    " Mobile Number is required.";
+                document.getElementById("mobile").style.border =
+                    "2px solid red";
+                valid = false;
+            }
+            /* Indian mobile number */
+            else if (!/^[6-9][0-9]{9}$/.test(mobile)) {
+                document.getElementById("mobileError").innerHTML =
+                    " Enter a valid 10-digit Indian mobile number.";
+                document.getElementById("mobile").style.border =
+                    "2px solid red";
+                valid = false;
+            }
+            /* ================================== */
+            /* TASK 3: EMAIL VALIDATION */
+            /* ================================== */
+            if (email === "") {
+                document.getElementById("emailError").innerHTML =
+                    " Email is required.";
+                document.getElementById("email").style.border =
+                    "2px solid red";
+                valid = false;
+            }
+            else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById("emailError").innerHTML =
+                    " Enter a valid email address.";
+                document.getElementById("email").style.border =
+                    "2px solid red";
+                valid = false;
+            }
+            /* ================================== */
+            /* TODAY'S DATE */
+            /* ================================== */
+            let today = new Date();
+            let year = today.getFullYear();
+            let month =
+                String(today.getMonth() + 1).padStart(2, "0");
+            let day =
+                String(today.getDate()).padStart(2, "0");
+            let todayDate =
+                year + "-" + month + "-" + day;
+            /* ================================== */
+            /* TASK 4: DATE OF BIRTH */
+            /* ================================== */
+            if (dob === "") {
+                document.getElementById("dobError").innerHTML =
+                    " Date of Birth is required.";
+                document.getElementById("dob").style.border =
+                    "2px solid red";
+                valid = false;
+            }
+            else if (dob > todayDate) {
+                document.getElementById("dobError").innerHTML =
+                    " Date of Birth cannot be a future date.";
+                document.getElementById("dob").style.border =
+                    "2px solid red";
+                valid = false;
+            }
+            /* ================================== */
+            /* TASK 4: GENDER VALIDATION */
+            /* ================================== */
+            let gender =
+                document.querySelector('input[name="gender"]:checked');
+            if (!gender) {
+                document.getElementById("genderError").innerHTML =
+                    " Please select Gender.";
+                valid = false;
+            }
+            /* ================================== */
+            /* TASK 4: BLOOD GROUP VALIDATION */
+            /* ================================== */
+            if (bloodGroup === "") {
+                document.getElementById("bloodError").innerHTML =
+                    " Please select Blood Group.";
+                document.getElementById("bloodGroup").style.border =
+                    "2px solid red";
+                valid = false;
+            }
+            /* ================================== */
+            /* TASK 4: DEPARTMENT VALIDATION */
+            /* ================================== */
+            if (department === "") {
+                document.getElementById("departmentError").innerHTML =
+                    " Please select Department / Appointment Type.";
+                document.getElementById("department").style.border =
+                    "2px solid red";
+                valid = false;
+            }
+            /* ================================== */
+            /* TASK 4: REGISTRATION DATE */
+            /* ================================== */
+            if (registrationDate === "") {
+                document.getElementById("registrationError").innerHTML =
+                    " Registration Date is required.";
+                document.getElementById("registrationDate").style.border =
+                    "2px solid red";
+                valid = false;
+            }
+            else if (registrationDate > todayDate) {
+                document.getElementById("registrationError").innerHTML =
+                    " Registration Date cannot be a future date.";
+                document.getElementById("registrationDate").style.border =
+                    "2px solid red";
+                valid = false;
+            }
+            /* ================================== */
+            /* PREVENT SUBMISSION IF INVALID */
+            /* ================================== */
+            if (!valid) {
+                event.preventDefault();
+            }
+            else {
+                alert("Patient registration successful!");
+            }
+        });
+        /* ================================== */
+        /* PREVENT FUTURE DATES IN DATE PICKER */
+        /* ================================== */
+        let currentDate = new Date();
+        let currentYear =
+            currentDate.getFullYear();
+        let currentMonth =
+            String(currentDate.getMonth() + 1).padStart(2, "0");
+        let currentDay =
+            String(currentDate.getDate()).padStart(2, "0");
+        let maximumDate =
+            currentYear + "-" +
+            currentMonth + "-" +
+            currentDay;
+        document.getElementById("dob").max =
+            maximumDate;
+        document.getElementById("registrationDate").max =
+            maximumDate;
+        /* ================================== */
+        /* RESET BUTTON */
+        /* ================================== */
+        document.getElementById("registrationForm").addEventListener("reset", function() {
+            setTimeout(function() {
+                document.getElementById("nameError").innerHTML = "";
+                document.getElementById("addressError").innerHTML = "";
+                document.getElementById("mobileError").innerHTML = "";
+                document.getElementById("emailError").innerHTML = "";
+                document.getElementById("dobError").innerHTML = "";
+                document.getElementById("genderError").innerHTML = "";
+                document.getElementById("bloodError").innerHTML = "";
+                document.getElementById("departmentError").innerHTML = "";
+                document.getElementById("registrationError").innerHTML = "";
+                document.getElementById("patientName").style.border = "";
+                document.getElementById("address").style.border = "";
+                document.getElementById("mobile").style.border = "";
+                document.getElementById("email").style.border = "";
+                document.getElementById("dob").style.border = "";
+                document.getElementById("bloodGroup").style.border = "";
+                document.getElementById("department").style.border = "";
+                document.getElementById("registrationDate").style.border = "";
+            }, 10);
+        });
+    </script>
+</body>
+</html>

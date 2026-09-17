@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration - ABC Healthcare</title>
+    <link rel="stylesheet" href="Task-8.css">
+</head>
+<body>
+    <!-- HEADER SECTION -->
+        <table class="header-table" id="header-section" cellpadding="0" cellspacing="0">
+            <tr>
+                <!-- TOP LEFT LOGO -->
+                <td class="logo-box" id="logo-container">
+                    <a href="index.html" title="Internal Logo Link">
+                        <img src="logo.png" alt="Healthcare Logo" id="main-logo" style="max-width: 100px; height: auto;" />
+                    </a>
+                    <br>
+                    <font size="2" color="#B2DFDB"><b>ABC Healthcare</b></font>
+                </td>
+                
+                <!-- TOP CENTER TO RIGHT BANNER -->
+                <td class="banner-box" id="banner-container">
+                    <div class="tooltip-container" id="system-tooltip">
+                        <font color="white" size="6">
+                            <b>URINE TEST STRIP READER SYSTEM</b>
+                        </font>
+                        
+                    </div>
+                    <br>
+                    <font color="#B2DFDB" size="4">
+                        ABC Healthcare Centre – Urine Test Centre Banner
+                    </font>
+                    <br>
+                    <font color="#EAF6F6" size="2">
+                        Software Version: <b>v2.4.0</b> | Year: <b>2026</b>
+                    </font>
+                </td>
+            </tr>
+        </table>
+    <div class="container">
+        
+
+        <!-- INTRODUCTION -->
+        <section class="intro">
+            <h2>ONLINE PATIENT REGISTRATION</h2>
+            <p>Please enter the patient's details carefully to register for the urine test.</p>
+        </section>
+
+        <!-- FORM -->
+        <form class="registration-form">
+            <table class="form-table">
+                <!-- PATIENT INFORMATION -->
+                <thead>
+                    <tr class="section-header">
+                        <th colspan="2">Patient Information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- PATIENT NAME -->
+                    <tr>
+                        <td class="label-col"><b>Patient Name</b></td>
+                        <td>
+                            <input type="text" name="patient_name" placeholder="Enter full name" class="input-text" required>
+                        </td>
+                    </tr>
+                    <!-- AGE -->
+                    <tr>
+                        <td class="label-col"><b>Age</b></td>
+                        <td>
+                            <input type="text" name="age" placeholder="Enter age" class="input-text">
+                        </td>
+                    </tr>
+                    <!-- GENDER -->
+                    <tr>
+                        <td class="label-col"><b>Gender</b></td>
+                        <td class="radio-group">
+                            <label><input type="radio" name="gender" value="male"> Male</label>
+                            <label><input type="radio" name="gender" value="female"> Female</label>
+                            <label><input type="radio" name="gender" value="other"> Other</label>
+                        </td>
+                    </tr>
+                    <!-- MOBILE -->
+                    <tr>
+                        <td class="label-col"><b>Mobile Number</b></td>
+                        <td>
+                            <input type="tel" name="mobile" placeholder="Enter mobile number" class="input-text">
+                        </td>
+                    </tr>
+                    <!-- EMAIL -->
+                    <tr>
+                        <td class="label-col"><b>Email</b></td>
+                        <td>
+                            <input type="email" name="email" placeholder="example@email.com" class="input-text">
+                        </td>
+                    </tr>
+                    <!-- PATIENT ID -->
+                    <tr>
+                        <td class="label-col"><b>Patient ID</b></td>
+                        <td>
+                            <input type="text" name="patient_id" placeholder="Enter Patient ID" class="input-text">
+                        </td>
+                    </tr>
+                    <!-- TEST DATE -->
+                    <tr>
+                        <td class="label-col"><b>Test Date</b></td>
+                        <td>
+                            <input type="date" name="test_date" class="input-date">
+                        </td>
+                    </tr>
+                    <!-- HEALTHCARE CENTRE BUTTONS -->
+                    <tr class="highlight-row">
+                        <td class="label-col"><b>Healthcare Centre</b></td>
+                        <td>
+                            <a href="https://www.somaiya-ayurvihar.org/" target="_blank">
+                                <button type="button" class="btn-link">Somaiya Ayurvihar Hospital</button>
+                            </a>
+                            <a href="https://www.somaiya.org/health.php" target="_blank">
+                                <button type="button" class="btn-link">Somaiya Diagnostic Centre</button>
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- DOCTOR NAME -->
+                    <tr>
+                        <td class="label-col"><b>Doctor Name</b></td>
+                        <td>
+                            <input type="text" name="doctor_name" placeholder="Enter doctor's name" class="input-text">
+                        </td>
+                    </tr>
+                    <!-- SYMPTOMS -->
+                    <tr class="section-header">
+                        <th colspan="2">Symptoms</th>
+                    </tr>
+                    <tr>
+                        <td class="label-col"><b>Select Symptoms</b></td>
+                        <td class="checkbox-group">
+                            <label><input type="checkbox" name="symptom" value="fever"> Fever</label>
+                            <label><input type="checkbox" name="symptom" value="pain"> Abdominal Pain</label>
+                            <label><input type="checkbox" name="symptom" value="burning"> Burning Sensation</label>
+                            <label><input type="checkbox" name="symptom" value="frequent"> Frequent Urination</label>
+                            <label><input type="checkbox" name="symptom" value="blood"> Blood in Urine</label>
+                        </td>
+                    </tr>
+                    <!-- REPORT FORMAT -->
+                    <tr class="section-header">
+                        <th colspan="2">Preferred Report Format</th>
+                    </tr>
+                    <tr>
+                        <td class="label-col"><b>Report Format</b></td>
+                        <td class="radio-group">
+                            <label><input type="radio" name="report" value="pdf"> PDF Report</label>
+                            <label><input type="radio" name="report" value="printed"> Printed Report</label>
+                        </td>
+                    </tr>
+                    <!-- BUTTONS -->
+                    <tr class="action-row">
+                        <td colspan="2">
+                            <input type="submit" value="REGISTER PATIENT" class="btn-action">
+                            <input type="reset" value="RESET FORM" class="btn-action">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+
+       <!-- BOTTOM MOST FOOTER BANNER -->
+        <table class="footer-table" id="footer-section" cellpadding="15">
+            <tr>
+                <td align="center">
+                    <font color="#ffffff" size="3">
+                        <b>ABC Healthcare Centre</b> | Urine Test Strip Reader System
+                    </font>
+                    <br>
+                    <font color="#B2DFDB" size="2">
+                        <b>Call:</b> +91 12345 67890 &nbsp;|&nbsp; 
+                        <b>Email:</b> support@abchealthcare.com &nbsp;|&nbsp; 
+                        <b>Hospital Name:</b> ABC Healthcare Centre & Research Institute
+                    </font>
+                    <br><br>
+                    <font color="#ffffff" size="1">
+                        © 2026 ABC Healthcare. All Rights Reserved. | System Version 2.4.0
+                    </font>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
